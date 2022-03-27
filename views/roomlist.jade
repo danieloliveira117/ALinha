@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	script(type='text/javascript').
+		pagativa = "jogar"
+		
+	script(src="/javascripts/pag.js")
+	script(src="/javascripts/updaterooms.js")
+	h1= title
+	div(class="sala")
+		h3(class="text-left") Escolher Sala
+			a(href="/createroom" class="btn btn-primary btn-xs pull-right")
+				b + Criar Sala
+		table(class="salas table table-hover table-responsive table")
+			thead
+				tr
+					th(class="text-center") Sala
+					th(class="text-center") Jogadores
+					th(class="text-center") Entrar
+			tbody(id="listadesalas")
+				tr
+					td(colspan="3") N&atilde;o existem salas de jogo criadas!

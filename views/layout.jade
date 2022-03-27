@@ -1,0 +1,40 @@
+doctype html
+html(xmlns="http://www.w3.org/1999/xhtml")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title= title
+		link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="/javascripts/jquery-1.11.1.min.js")
+		<!--[if lt IE 9]>
+		script(src="/javascripts/html5shiv.js")
+		script(src="/javascripts/respond.min.js")
+		<![endif]-->
+	body
+		nav(class="navbar navbar-inverse navbar-fixed-top")
+			div(class="navbar-header")
+				div(class="container-fluid" style="float:left")
+					img(src="images/log.png" href="#" height="72px" width="194px" style="margin: 10px")
+				button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+					
+			div(class="navbar-collapse collapse")
+				div(class="navbar-header navbar-right" style="margin-top: 25px")
+					ul(class="nav navbar-nav")
+						li#jogarli
+							a(href="/roomlist") JOGAR
+						li#instrucoesli
+							a(href="/instrucoes") INSTRUÇÕES
+						- if(islogged)
+							li#logoutli
+								a(href="/logout") LOGOUT
+						- else
+							li#registoli
+								a(href="/registar") REGISTAR
+		div(class="main clearfix" style="margin-top: 92px")
+			block content
+		script(src="/javascripts/bootstrap.min.js")

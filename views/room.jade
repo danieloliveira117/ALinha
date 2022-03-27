@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	script(src="/socket.io/socket.io.js")
+	
+	script(type='text/javascript').
+		roomtitle = "#{room.roomtitle}"
+		username = "#{username}"
+		pagativa = "jogar"
+		
+	script(src="/javascripts/sala.js")
+	script(src="/javascripts/pag.js")
+	h1= title
+	div(class="sala")
+		h3(class="text-left") #{room.roomtitle}
+			a(href="/sairsala" class="btn btn-danger btn-xs pull-right") Sair da Sala
+		table(class="table table-responsive")
+			thead
+				tr
+					th Jogadores (#{room.members.length} / #{room.maxplayers})
+					th Cor
+			tbody(class="text-left")
+				each member in room.members
+					tr
+						td #{member.username}
+						td
+							a(style="background-color:#{member.color};" class="choosecolor")
+		p(style="padding: 10px;")
+			b O jogo só inicia quando todos os jogadores estiverem na sala.

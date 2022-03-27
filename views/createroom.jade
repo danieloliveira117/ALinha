@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	script(type='text/javascript').
+		pagativa = "jogar"
+		
+	script(src="/javascripts/pag.js")
+	h1= title
+	div(style="max-width:500px; margin: 0 auto;")
+		form#FormCriarSala(class="form-horizontal" role="form" name="criarsala" method="post" action="/criarsala")
+			div(class="form-group")
+				label(class="col-sm-3 control-label" for="textinput") Nome da Sala:
+				div(class="col-sm-9")
+					input#roomtitle(type="text" name="roomtitle" class="form-control")
+			div(class="form-group")
+				label(class="col-sm-3 control-label" for="maxplayers") N&uacute;mero de Jogadores:
+				div(class="col-sm-9")
+					select#maxplayers(class="form-control" name="maxplayers")
+						option 2
+						option 3
+						option 4
+						option 5
+						option 6
+			div(class="form-group")
+				div(class="text-center col-sm-12")
+					button(type="submit" class="btn btn-primary") Criar Sala
+					|&nbsp;
+					a(class="btn btn-default" href="/roomlist") Cancelar

@@ -1,0 +1,27 @@
+extends layout
+
+block content
+	script(type='text/javascript').
+		pagativa = "instrucoes"
+		
+	script(src="/javascripts/pag.js")
+	h1= title
+	div(style="max-width:600px; margin: 0 auto;")
+		h3 Como Jogar
+		p(class="text-justify" style="font-size: 16px")
+			|&nbsp;&nbsp;&nbsp; Cada jogador controla um ponto, que traça uma linha à medida que o ponto se movimenta.
+			|No início de cada jogo os jogadores são colocados dentro do campo de jogo, numa posição aleatória, 
+			|e iniciam automaticamente o movimento numa direção também aleatória.<br/>
+			|<br/>&nbsp;&nbsp;&nbsp; Para movimentar um jogador pode utilizar as Setas <b>[<-]</b> e <b>[->]</b>,
+			|que os movem para a esquerda e direita da posição atual.
+		h3 Objetivo do Jogo
+		p(class="text-justify" style="font-size: 16px")
+			|&nbsp;&nbsp;&nbsp; O objetivo do jogo é não “chocar” contra as paredes da caixa,
+			|ou nas linhas traçadas pelos jogadores (incluindo o próprio jogador),
+			|o último jogador que sobreviver dentro da caixa vai ganhando pontos assim que
+			|os adversários percam.
+			|&nbsp;&nbsp;&nbsp; Ganha o jogador que conseguir atingir primeiro o limite de pontos.
+		h3 Sistema de Pontos
+		p(class="text-justify" style="font-size: 16px")
+			|&nbsp;&nbsp;&nbsp; O limite de pontos é igual a 10 vezes (o número de jogadores menos 1). <br/>(Exemplo: 4 jogadores = 30 pontos)
+			|<br/><br/><small><b>Nota:</b> Caso exista um empate o jogo é estendido com pontos equivalentes ao número de jogadores.</small>

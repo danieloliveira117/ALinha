@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+### CUSTOM
+mongodb/*
+!mongodb/init.cmd
+
+data/*
+!data/.gitkeep

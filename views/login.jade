@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	script(type='text/javascript').
+		pagativa = "login"
+		
+	script(src="/javascripts/pag.js")
+	script(src="javascripts/users.js")
+	h1= title
+	div(style="max-width:500px; margin: 0 auto;")
+		form#formAddUser(class="form-horizontal" role="form" name="login",method="post",action="/login")
+			div(class="form-group")
+				label(class="col-sm-4 control-label" for="inputUserName") Username:
+				div(class="col-sm-8" style="max-width:350px; margin: 0 auto;")
+					input#inputUserName(type="text" name="username" class="form-control")
+			div(class="form-group")
+				label(class="col-sm-4 control-label" for="inputUserPassword") Password:
+				div(class="col-sm-8" style="max-width:350px; margin: 0 auto;")
+					input#inputUserPassword(type="password" name="userpassword" class="form-control")
+			div(class="form-group")
+				div(class="col-md-12 text-center")
+					button#btnSubmit(type="submit" class="btn btn-primary") Login
+				div(class="col-md-12 text-center" style="margin-top: 10px")
+					div#erro(style="display:none" class="alert alert-danger")

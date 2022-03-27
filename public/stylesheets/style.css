@@ -1,0 +1,95 @@
+body {
+	background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.ready {
+    width:15px;
+    height:15px;
+    background-color:lightgreen;
+    display:inline-block;
+    border: 1px solid black;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.notready {
+    width:15px;
+    height:15px;
+    background-color:indianred;
+    display:inline-block;
+    border: 1px solid black;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+.choosecolor {
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.aviso {
+    font-size: x-small;
+    border: 1px solid black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    background-color: #e0e0e0;
+    color: #222;
+}
+
+#canvas {
+	background-color: #222;
+	border: 1px solid #111;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #555;
+}
+
+.selectpicker  {
+	color: #000;
+    width: 220px;
+	box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+}
+
+.sala {
+	margin: 0 auto;
+	max-width: 800px;
+	background-color: #222;
+    border: 1px solid black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	padding: 2px 15px 2px 15px;
+}
+
+.salajogo {
+	max-width:800px;
+	margin: 25px auto 0 auto;
+}
+
+.createroom {
+	margin: auto 0;
+	max-width: 600px;
+}
+
+.salas thead {
+	background-color: #444;
+	color: #FFF;
+}

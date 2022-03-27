@@ -1,0 +1,28 @@
+extends layout
+
+block content
+	script(src="/socket.io/socket.io.js")
+	
+	script(type='text/javascript').
+		roomtitle = "#{room.roomtitle}"
+		username = "#{username}"
+		pagativa = "jogar"
+		
+	script(src="/javascripts/pag.js")
+	script(src="/javascripts/linha_online.js")
+	
+	div(class="container salajogo")
+		div(class="row clearfix")
+			div(class="col-md-offset-2 col-md-2 column")
+				h3 #{room.roomtitle}
+				h5#maxpontos 
+					|<b>Objetivo:</b> 0 pontos
+				ul(class="list-unstyled text-left")
+					each member in room.members
+						li
+							div(style="color:#{member.color}; max-width: 200px; margin: 0 auto;")
+								b #{member.username}
+									span(id="#{member.username}pontos" class="pull-right" style="color:#FFF;") 0
+			div(class="col-md-8 column" style="position: relative; margin: 0 auto; max-width: 500px")
+				canvas(id="canvas" width="500" height="450" style="position: absolute; left: 0; top: 0; z-index: 0;")
+				canvas(id="canvas2" width="500" height="450" style="position: absolute; left: 0; top: 0; z-index: 1; margin: 1px;")
